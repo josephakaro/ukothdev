@@ -1,4 +1,4 @@
-name: UKOTHDEV CI/CD Pipeline
+name: UKOTHDEV Deploying
 
 on:
   push:
@@ -25,21 +25,22 @@ jobs:
         username: ${{ secrets.DO_USER }}
         key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
         source: "."
-        target: "/var/www/ukothdev"
+        target: "/var/www/"
 
     - name: Install dependencies
       run: |
-        ssh root@161.35.72.151 << 'EOF'
-        cd /var/www/your_project
+        ssh root@your_droplet_ip << 'EOF'
+        cd /var/www/ukothdev
         python3 -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
         EOF
 
-    - name: Restart application
+    - name: Restart Gunicorn
       run: |
         ssh root@161.35.72.151 << 'EOF'
         cd /var/www/ukothdev
-        pm2 stop all || true
-        pm2 start venv/bin/flask --name "flask-app" -- run --host=0.0.0.0
+        pkill gunicorn || true
+        source venv/bin/activate
+        gunicorn -w 4 -b 127.0.0.1:8000 app:app &
         EOF
