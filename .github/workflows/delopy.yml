@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.DO_USER }}
         key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
         source: "."
-        target: "/var/www/"
+        target: "/var/www/ukothdev"
 
     - name: Install dependencies
       run: |
