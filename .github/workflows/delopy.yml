@@ -43,6 +43,6 @@ jobs:
     - name: Restart Gunicorn
       run: |
         ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
-        cd /var/www/ukothdev
+        sudo systemctl daemon-reload
         sudo systemctl restart ukothdev
         EOF
