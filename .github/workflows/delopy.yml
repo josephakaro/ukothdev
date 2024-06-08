@@ -29,7 +29,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        ssh root@your_droplet_ip << 'EOF'
+        ssh root@161.35.72.151 << 'EOF'
         cd /var/www/ukothdev
         python3 -m venv venv
         source venv/bin/activate
