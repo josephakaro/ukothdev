@@ -42,7 +42,7 @@ jobs:
 
     - name: Restart Gunicorn
       env:
-        DATABASE_URI: ${{ secrets.MYSQL_URI }}
+        MYSQL_URI: ${{ secrets.MYSQL_URI }}
       run: |
         ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
         sudo systemctl daemon-reload
