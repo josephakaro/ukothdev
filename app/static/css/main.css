@@ -4,28 +4,18 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: azure;
-
-    height: 90%;
-    width: 100%;
-}
-
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 5%;
-
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: 'Arial', sans-serif;
+}
 
-    background-color: #007bff;
-    color: white;
+.color{
+    background-color: azure;
 }
 
 .container{
@@ -39,7 +29,7 @@ footer{
     margin: 100px auto;
     padding: 20px;
 
-    height: 200px;
+    height: 300px;
     width: 500px;
 
 
@@ -48,39 +38,59 @@ footer{
 
 }
 
+.container h1{
+    margin-top: 20px;
+}
+
 .container p{
     flex-wrap: wrap;
 
     width: 100%;
-    height: 20%;
+    height: 10%;
 }
 
 
 .container form{
-    margin-top: 20px;
+    margin-top: 10px;
 
     width: 100%;
-    height: 40px;
+    height: 200px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1em;
 }
 
 .container form input{
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    height: 35px;
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
 .container form button{
-    width: 30%;
-    height: 100%;
+    width: 100%;
+    height: 35px;
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    background-color: #ff0000;
+    background-color: #28a745;
     color: white;
+}
+
+.container form button:hover{
+    background-color: #218838;
+}
+
+.name-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1em;
+
+    width: 100%;
+    height: 50px;
 }
