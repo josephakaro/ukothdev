@@ -1,8 +1,5 @@
 from app import app
 from app.db.db import db_session
-from dotenv import load_dotenv
-
-load_dotenv()
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
