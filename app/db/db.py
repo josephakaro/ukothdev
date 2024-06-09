@@ -1,14 +1,13 @@
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker, declarative_base
-from dotenv import load_dotenv
 
 MYSQL_URI = os.getenv('MYSQL_URI')
 
 if not MYSQL_URI:
     raise ValueError('No MYSQL_URI enironment variable set')
 
-engine = create_engine(MYSQL_URI)
+engine = create_engine(f'{MYSQL_URI}')
 db_session = scoped_session(sessionmaker(
     autocommit=False,
     autoflush=False,
