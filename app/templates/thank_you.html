@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Thank You!</h1>
+        <p>Your subscription has been confirmed. You've been added to our list and will hear from us soon.</p>
+        <a href="/subscribe">Go to Homepage</a>
+    </div>
+{% endblock %}
