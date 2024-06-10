@@ -2,10 +2,50 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
-    <h1>Home</h1>
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 {% endblock %}
 
-{% block footer %}
-    <p>&copy; 2020 UkothDev</p>
+{% block content %}
+    <nav class="navbar">
+        <!-- brand-logo -->
+        <div class="brand-logo">
+            <h1>UKOTH<span>DEV</span></h1>
+        </div>
+        <!-- navbar links -->
+        <ul>
+            <li class="dropdown">
+                <a class="dropdown-text">Solutions</a>
+                <div class="dropdown-items">
+                    <a href="#">Overview</a>
+                    <a href="#">Enterprise</a>
+                    <a href="#">DMBs</a>
+                    <a href="#">Startups</a>
+                </div>
+
+            </li>
+            <li><a href="#">Why UkothDev</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- navbar button -->
+        <div class="navbar-button">
+            <a href="#">Schedule Consultations</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Transforming your business with technology</h1>
+            <p>UkothDev is a software development company that helps businesses grow through technology</p>
+            <button>Learn More</button>
+        </div>
+        <div class="hero-image">
+        </div>
+    </div>
+    <div class="features">
+        <h1>Transforming your business with technology</h1>
+        <p>UkothDev is a software development company that helps businesses grow through technology</p>
+    </div>
 {% endblock %}

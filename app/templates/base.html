@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename=('css/main.css'))}}">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icon/ukothdev_Colored.png') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename=('css/main.css')) }}" />
     <title>UkothDev - {% block title %}{% endblock %}</title>
     {% block styles %}{% endblock %}
 </head>

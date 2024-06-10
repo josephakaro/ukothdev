@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS newletters(
     PRIMARY KEY (news_id)
 )
 
-CREATE USER 'ukothdev'@'%' IDENTIFIED BY 'Uk0thDev_SQL!987';
+CREATE USER 'ukothdev'@'localhost' IDENTIFIED BY 'Uk0thDev_SQL!987';
 
-DROP USER 'ukothdev'@'localhost';
+DROP USER 'ukothdev'@'';
 
-GRANT ALL PRIVILEGES on ukothdev.* To 'ukothdev'@'%';
+GRANT ALL PRIVILEGES ON ukothdev.* TO 'ukothdev'@'localhost';
