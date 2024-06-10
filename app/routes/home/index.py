@@ -1,6 +1,6 @@
 from app import app
-from flask import render_template
+from flask import redirect, url_for
 
 @app.route('/')
 def Index():
-    return render_template('index.html')
+    return redirect(url_for('subscribe'))
