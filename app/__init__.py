@@ -12,8 +12,6 @@ def create_app():
     app.config['SECRET_KEY'] = 'mysecretkey'
 
     # Database Configurations
-    with app.app_context():
-        init_db()
 
     # Blueprint Imports:
     from app.pages.index import home
