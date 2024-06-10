@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    background-image: linear-gradient(to right bottom, #fc0000, #ff2d24, #ff443b, #ff5750, #ff6864, #ff7572, #fe8280, #fd8f8e, #fa9c9b, #f7a8a7, #f3b4b4, #eec0c0);
     font-family: 'Arial', sans-serif;
 }
 .container {
@@ -30,12 +30,12 @@ a {
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #28a745;
+    background-color: #ff0000;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 a:hover {
-    background-color: #218838;
+    background-color: #882121;
 }
