@@ -2,10 +2,6 @@
 body{
     height: 100vh;
     width: 100vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 nav{
@@ -15,10 +11,14 @@ nav{
     flex-direction: row;
 
     height: 60px;
-    width: 100%;
+    width: 100vw;
 
     background-color: white;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
+    position: fixed;
+
+    top: 0;
+    z-index: 1000;
 }
 
 @media (max-width: 600px) {
@@ -57,6 +57,13 @@ nav div{
     width: 100%;
 }
 
+.navbar-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+}
+
 .navbar-button a{
     background-color: #ff0000;
     border: none;
@@ -64,7 +71,6 @@ nav div{
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
@@ -85,6 +91,8 @@ nav div{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .dropdown-items a {
@@ -95,53 +103,219 @@ nav div{
 }
 
 .dropdown-items a:hover {
-    background-color: red;
+    background-color:#e2e0e0;;
     overflow: hidden;
-    color: white;
+    color: red;
 }
 
 .dropdown:hover .dropdown-items {
     display: block;
 }
 
-/* HERO */
+
 .hero{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    height: 100dvh;
+    width: 90vw;
+    height: 80vh;
+
+    margin: 100px auto;
+
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+
+    overflow: hidden;
 }
 
 .hero-text{
-    flex: 1;
-    padding: 20px;
+    flex: 2;
+    padding: 60px;
+    background-color: #ff0000;
 
-    background-color: rgb(139, 121, 121);
-    color: white;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 60%;
+}
+
+.hero-text span{
+    font-weight: 700;
 }
 
 .hero-image{
-    background-image: url('https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     flex: 1;
-    height: 100%;
-    width: 100%;
 }
 
-.features{
+.hero-text,
+.hero-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text h1{
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+    text-align: start;
+
+    margin-bottom: -10px;
+}
+
+.hero-text p{
+    font-size: 1.5em;
+    color: white;
+    text-align: start;
+}
+
+.hero-text a{
+    color: red;
+    background-color: #ffff;
+
+    width: 200px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    padding: 10px;
+}
+
+.hero-text a:hover{
+    background-color: #e2e0e0;
+    color: red;
+}
+
+
+.top-rated{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    margin: 10px auto;
+}
+
+.top-rated h2{
+    font-size: 1.5em;
+    color: #ff0000;
+}
+
+.review-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.review-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.review{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+
+    gap: 10px;
+
+    border-radius: 5px;
+}
+
+.review:hover{
+    background-color: #ffd8d8;
+}
+
+.stars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.stars span{
+    margin-bottom: -10px;
+}
+
+
+/* WHY NOW SECTION */
+
+.solution{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    width: 1000px;
-    height: 70%;
+    width: 90vw;
+    height: 80vh;
+
+    margin: 100px auto;
+}
+
+.section-1{
+    flex: 1;
+    padding: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 60%;
+}
+
+.section-1 h1{
+    font-size: 3em;
+    font-weight: 800;
+    color: #000000;
+    text-align: start;
+}
+
+.section-1 h1 span{
+    color: #ff0000;
+}
+
+.section-1 span{
+    font-weight: 700;
+}
+
+#red{
+    color: #ff0000;
+}
+
+.section-1 p{
+    font-size: 1.2em;
+    color: #000000;
+    text-align: start;
+}
+
+.section-2{
+    flex: 1;
+
+    width: 100%;
+}
+
+.section-2 img{
+    width: 80%;
+}
+
+.border{
+    background-color: #cabcbc;
+    border-radius: 30px;
 }

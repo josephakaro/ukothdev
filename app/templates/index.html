@@ -15,7 +15,7 @@
         <!-- navbar links -->
         <ul>
             <li class="dropdown">
-                <a class="dropdown-text">Solutions</a>
+                <a class="dropdown-text">SOLUTIONS</a>
                 <div class="dropdown-items">
                     <a href="#">Overview</a>
                     <a href="#">Enterprise</a>
@@ -24,28 +24,85 @@
                 </div>
 
             </li>
-            <li><a href="#">Why UkothDev</a></li>
-            <li><a href="#">Success Stories</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">WHY UKOTHDEV</a></li>
+            <li><a href="#">SUCCESS STORIES</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACT</a></li>
         </ul>
         <!-- navbar button -->
         <div class="navbar-button">
-            <a href="#">Schedule Consultations</a>
+            <a href="#">GET QUOTES</a>
         </div>
     </nav>
+    <!-- hero section -->
     <div class="hero">
         <div class="hero-text">
-            <h1>Transforming your business with technology</h1>
-            <p>UkothDev is a software development company that helps businesses grow through technology</p>
-            <button>Learn More</button>
+            <h1>Building apps is hard...<span>when you're distracted.</span></h1>
+            <p>When hiring an app or web development team to build custom software, one variable matters most: are the developers <span>fully
+            dedicated to your success</span>, or  are you <span>client of many?</span>
+            </p>
+            <a href="#">Learn More</a>
         </div>
         <div class="hero-image">
+            <img src="{{ url_for('static', filename='assets/img/hero-01.jpg') }}"  alt="software enginer coding"/>
         </div>
     </div>
-    <div class="features">
-        <h1>Transforming your business with technology</h1>
-        <p>UkothDev is a software development company that helps businesses grow through technology</p>
+    <div class="top-rated">
+        <h2>The top-rated software firm in South Sudan, with more than 200 five-star reviews from past clients</h2>
+        <div class="review-card">
+        <div class="review">
+                <img src="https://asset.brandfetch.io/idN7c_7lEQ/idg6LKkjnM.svg" alt="G2 logo"/>
+                <div class="stars">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <p>G2 Reviews</p>
+                </div>
+        </div>
+        <div class="review">
+            <img src="https://asset.brandfetch.io/id6O2oGzv-/idvNIQR3p7.svg" alt="Google logo"/>
+            <div class="stars">
+                <span>⭐⭐⭐⭐⭐</span>
+                <p>Google Reviews</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://shareables-prod-static.clutch.co/badges/top_clutch.co_software_developers_consumer_products__services_2023.svg" alt="Clutch logo"/>
+            <div class="stars">
+                <span>⭐⭐⭐⭐⭐</span>
+                <p>Clutch Reviews</p>
+        </div>
     </div>
+</div>
+</div>
+<div class="solution">
+    <div class="section-1">
+        <h1>Whay <span>now?</span></h1>
+        <p>
+            <span>As a business</span>, have you felt the strain of hours lost to manual tasks? Struggling with a patchwork of SaaS tools that promised much but deliver little cohesion, or - even worse - wrestling with a legacy interface that's become more of a hinderance than a help?
+        </p>
+        <p>
+            <span>As an entrepreneur</span>, have you found the perfect problem that you're eager to solve with a custom mobile or web-based application?
+        </p>
+        <p>
+            <span>UkothDev <span id="red">designs, develops, and launches</span> beautiful apps and web-apps that you'll be proud to own</span>, with a process that makes sense. And, most importantly, with a team assigned full-time to your project.
+        </p>
+    </div>
+    <div class="section-2">
+        <img src="https://designli.co/hubfs/images/homepage/why-now-compressed.png" alt="software engineer coding"/>
+    </div>
+</div>
+<div class="solution border">
+    <div class="section-1">
+        <h1>Hire an <span>on-demand team</span> of the specialists you need.</h1>
+        <p>
+            Left alone, designers will create art projects. Engineers will create science fair gizmos. Business minds will create spreadsheets. UkothDev brings together these disciplines into on-demand, <span id="red">dedicated product team</span> that pour themselves, full-time, into the success of your app or web-app initiative.
+        </p>
+        <p>
+            Existing as your dedicated software engineering department, we'll work together to solve your most pressing business problems with custom software.
+        </p>
+    </div>
+    <div class="section-2">
+        <img src="https://designli.co/hs-fs/hubfs/images/homepage/card-diagram.png?width=633&height=698&name=card-diagram.png" alt="software engineer coding"/>
+    </div>
+</div>
 {% endblock %}
