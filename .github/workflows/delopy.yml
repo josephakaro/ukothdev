@@ -30,6 +30,12 @@ jobs:
         key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
         source: "."
         target: "/var/www/ukothdev"
+    
+    - name: Set environment variables
+      run: |
+        ssh ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
+        echo "MYSQL_URI=${{ secrets.MYSQL_URI }}" > /var/www/ukothdev/.env
+        EOF
 
     - name: Install dependencies
       run: |
