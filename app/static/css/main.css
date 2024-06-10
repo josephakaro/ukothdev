@@ -1,181 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body{
     margin: 0;
-    background-image: linear-gradient(to right bottom, #fc0000, #ff2d24, #ff443b, #ff5750, #ff6864, #ff7572, #fe8280, #fd8f8e, #fa9c9b, #f7a8a7, #f3b4b4, #eec0c0);
-    font-family: 'Arial', sans-serif;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
-.brand-logo{
-    width: 100px;
-    margin-top: 10px;
+img{
+    width: 5%;
 }
 
-.color{
-    background-color: azure;
+li{
+    list-style-type: none;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: .5em;
-    margin: 100px auto;
-    padding: 20px;
-    height: 500px;
-    width: 500px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.container h1{
-    margin-top: 20px;
-}
-
-.container p{
-    flex-wrap: wrap;
-    width: 100%;
-    height: 10%;
-}
-
-.container form{
-    margin-top: 10px;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.container form input{
-    width: 100%;
-    height: 35px;
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.container form input:focus{
-    outline: none;
-    border: 1px solid #ff0000;
-}
-
-.container form button{
-    width: 100%;
-    height: 35px;
-    padding: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    background-color: #fa0000;
-    color: white;
-}
-
-.container form button:hover{
-    background-color: #882121;
-}
-
-.name-field{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-    width: 100%;
-    height: 50px;
-}
-
-/* Media Queries */
-
-/* Mobile */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 10px;
-        height: auto;
-    }
-    
-    .container h1 {
-        font-size: 1.5em;
-    }
-    
-    .container p {
-        font-size: 1em;
-    }
-    
-    .container form input, .container form button {
-        height: 30px;
-        font-size: 1em;
-    }
-    
-    .name-field {
-        flex-direction: column;
-        gap: .5em;
-        height: auto;
-    }
-}
-
-/* Tablet */
-@media (min-width: 601px) and (max-width: 900px) {
-    .container {
-        width: 80%;
-        margin: 50px auto;
-        padding: 15px;
-        height: auto;
-    }
-    
-    .container h1 {
-        font-size: 1.75em;
-    }
-    
-    .container p {
-        font-size: 1.1em;
-    }
-    
-    .container form input, .container form button {
-        height: 35px;
-        font-size: 1.1em;
-    }
-    
-    .name-field {
-        gap: .75em;
-        height: auto;
-    }
-}
-
-/* Desktop */
-@media (min-width: 901px) {
-    .container {
-        width: 500px;
-        height: 500px;
-        margin: 100px auto;
-        padding: 20px;
-    }
-    
-    .container h1 {
-        font-size: 2em;
-    }
-    
-    .container p {
-        font-size: 1.2em;
-    }
-    
-    .container form input, .container form button {
-        height: 50px;
-        font-size: 1.2em;
-    }
-    
-    .name-field {
-        gap: 1em;
-        height: 50px;
-    }
+a{
+    text-decoration: none;
+    color: red;
 }

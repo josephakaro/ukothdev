@@ -2,6 +2,10 @@
 
 {% block title %}Coming Soon!{% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/subscribe.css') }}">
+{% endblock %}
+
 {% block content %}
     <div class="container color">
         <img class="brand-logo" src="{{ url_for('static', filename='assets/icon/ukothdev_Colored.png') }}" alt="ukothdev brand logo" />

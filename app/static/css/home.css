@@ -1,0 +1,147 @@
+/* Layout */
+body{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    height: 60px;
+    width: 100%;
+
+    background-color: white;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    nav{
+        flex-direction: column;
+    }
+}
+
+nav div h1 span{
+    color: red;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex: 3;
+    width: 100%;
+
+    font: 28px;
+    font-weight: 700;
+}
+
+nav ul li{
+    font: larger;
+    font-weight: 700;
+}
+
+
+nav div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    width: 100%;
+}
+
+.navbar-button a{
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-items {
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-items a {
+    color: red;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-items a:hover {
+    background-color: red;
+    overflow: hidden;
+    color: white;
+}
+
+.dropdown:hover .dropdown-items {
+    display: block;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100dvh;
+}
+
+.hero-text{
+    flex: 1;
+    padding: 20px;
+
+    background-color: rgb(139, 121, 121);
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image{
+    background-image: url('https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 1000px;
+    height: 70%;
+}
