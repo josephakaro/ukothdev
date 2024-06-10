@@ -1,12 +1,19 @@
 # This is Flask Application Factory
+import os
 from flask import Flask
+from app.database import init_db
+from dotenv import load_dotenv
 
-def create_app(config=None):
+def create_app():
     # App Configurations:
+    load_dotenv()
+
     app = Flask(__name__)
-    app.config.from_object(config)
+    app.config['SECRET_KEY'] = 'mysecretkey'
 
     # Database Configurations
+    with app.app_context():
+        init_db()
 
     # Blueprint Imports:
     from app.pages.index import home
