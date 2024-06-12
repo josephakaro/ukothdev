@@ -1,10 +1,7 @@
-from app import app
-from app.database import db
+from app import create_app
 from app.database import init_db
 
-@app.teardown_appcontext
-def shutdown_session(exception=None):
-    db.remove()
+app = create_app()
 
 if __name__ == '__main__':
     with app.app_context():
