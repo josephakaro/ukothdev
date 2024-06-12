@@ -4,37 +4,56 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
 {% endblock %}
 
 {% block content %}
-    <nav class="navbar">
-        <!-- brand-logo -->
-        <div class="brand-logo">
-            <h1>UKOTH<span>DEV</span></h1>
-        </div>
-        <!-- navbar links -->
-        <ul>
-            <li class="dropdown">
-                <a class="dropdown-text">SOLUTIONS</a>
-                <div class="dropdown-items">
-                    <a href="#">Overview</a>
-                    <a href="#">Enterprise</a>
-                    <a href="#">DMBs</a>
-                    <a href="#">Startups</a>
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- brand-logo -->
+    <div class="brand-logo">
+        <h1>UKOTH<span>DEV</span></h1>
+    </div>
+    <!-- navbar toggler button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SOLUTIONS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Overview</a>
+                    <a class="dropdown-item" href="#">Enterprise</a>
+                    <a class="dropdown-item" href="#">DMBs</a>
+                    <a class="dropdown-item" href="#">Startups</a>
                 </div>
-
             </li>
-            <li><a href="#">WHY UKOTHDEV</a></li>
-            <li><a href="#">SUCCESS STORIES</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="/contact">CONTACT</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">WHY UKOTHDEV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SUCCESS STORIES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
+            </li>
         </ul>
-        <!-- navbar button -->
-        <div class="navbar-button btn-primary">
-            <a href="#">GET QUOTES</a>
-        </div>
-    </nav>
+    </div>
+    <!-- navbar button -->
+    <div class="btn btn-primary ml-lg-3">
+        <a href="#">GET QUOTES</a>
+    </div>
+</nav>
     <!-- hero section -->
     <div class="hero">
         <div class="hero-text">

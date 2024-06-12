@@ -12,5 +12,6 @@ class Subscribe(Base):
         self.firstname = firstname
         self.lastname = lastname
         self.email = email
+
     def __repr__(self):
         return f'<Subscribe {self.email}>'

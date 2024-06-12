@@ -4,7 +4,6 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
-
 {% endblock %}
 
 {% block content %}
@@ -48,38 +47,4 @@
         <a class="btn btn-primary ml-lg-3" href="#">GET QUOTES</a>
     </div>
 </nav>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 form-container">
-            <div id="error-message" class="alert alert-danger d-none"></div>
-            <form id="contact-form" action="/contact" method="post">
-                <div class="form-group">
-                    <label for="firstname">First Name</label>
-                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Your first name.." required>
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Your last name.." required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Work Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email.." required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number.." required>
-                </div>
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" class="form-control" id="company" name="company" placeholder="Your company name..">
-                </div>
-                <div class="form-group">
-                    <label for="project_overview">Quick Project Overview</label>
-                    <textarea id="project_overview" class="form-control" name="project_overview" placeholder="Write something.." style="height:200px" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
 {% endblock %}
