@@ -1,20 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Layout */
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
 
-body{
     font-family: 'Lato', sans-serif;
 }
 
-li{
-    list-style-type: none;
+nav div a{
+    color: white;
 }
 
-a{
-    text-decoration: none;
-    color: red;
+nav div a:hover{
+    color: white;
+}
+
+:root {
+    --bs-primary: #ff0000; /* Set primary color to red */
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #cc0000; /* Darken red for hover */
+    border-color: #cc0000;
+}
+
+.navbar-brand h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-brand span {
+    color: var(--bs-primary);
+}
+.navbar-nav .nav-link {
+    color: #000;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary);
+}
+.dropdown-menu a {
+    color: #000;
+}
+.dropdown-menu a:hover {
+    color: var(--bs-primary);
+}
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #cc0000; /* Darken red for hover */
+    border-color: #cc0000;
 }
