@@ -335,3 +335,53 @@ nav div{
     background-color: #cabcbc;
     border-radius: 30px;
 }
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    nav ul {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar-button a {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .hero {
+        height: auto; /* Allow hero section to expand based on content */
+    }
+
+    .hero-text {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .hero-text a {
+        width: 120px; /* Adjust button width for smaller screens */
+    }
+
+    .review-card img {
+        width: 25px; /* Adjust image size for smaller screens */
+        height: 25px; /* Adjust image size for smaller screens */
+    }
+
+    .section-1 {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .section-1 h1 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .section-1 p {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
