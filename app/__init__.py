@@ -1,7 +1,6 @@
 # This is Flask Application Factory
-import os
 from flask import Flask
-from app.database import init_db
+from app.database import db
 from dotenv import load_dotenv
 
 def create_app():
@@ -23,5 +22,9 @@ def create_app():
     app.register_blueprint(home)
     app.register_blueprint(subcribe)
     app.register_blueprint(thanks)
+
+    @app.teardown_appcontext
+    def shutdown_session(exception=None):
+        db.remove()
     
     return app
