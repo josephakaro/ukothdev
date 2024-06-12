@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <!-- brand-logo -->
+    <div class="brand-logo">
+        <h1>UKOTH<span>DEV</span></h1>
+    </div>
+    <!-- navbar links -->
+    <ul>
+        <li class="dropdown">
+            <a class="dropdown-text">SOLUTIONS</a>
+            <div class="dropdown-items">
+                <a href="#">Overview</a>
+                <a href="#">Enterprise</a>
+                <a href="#">DMBs</a>
+                <a href="#">Startups</a>
+            </div>
+
+        </li>
+        <li><a href="#">WHY UKOTHDEV</a></li>
+        <li><a href="#">SUCCESS STORIES</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+    </ul>
+    <!-- navbar button -->
+    <div class="navbar-button btn-primary">
+        <a href="#">GET QUOTES</a>
+    </div>
+</nav>
+<form action="/contact" method="post">
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Your first name.." required>
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
+    <label for="email">Work email</label>
+    <input type="email" id="email" name="email" placeholder="Your email.." required>
+    <lable for="phone">Phone number</lable>
+    <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+    <label for="company">Company name</label>
+    <input type="text" id="company" name="company" placeholder="Your company name..">
+    <label for="project_overview">Quick Project Overview</label>
+    <textarea id="project_overview" name="project_overview" placeholder="Write something.." style="height:200px" required></textarea>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
