@@ -16,12 +16,14 @@ def create_app():
     from app.pages.index import home
     from app.pages.subcribe import subcribe
     from app.pages.thanks import thanks
+    from app.pages.contact import contacts
 
 
     # Blueprint Registrations:
     app.register_blueprint(home)
     app.register_blueprint(subcribe)
     app.register_blueprint(thanks)
+    app.register_blueprint(contacts)
 
     @app.teardown_appcontext
     def shutdown_session(exception=None):
