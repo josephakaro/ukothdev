@@ -21,6 +21,9 @@ def create_app():
     from app.pages.logout import logouts
     from app.pages.signup import signups
     from app.pages.dashboard import dashboards
+    from app.pages.subcribe import edit_subscribers
+    from app.pages.subcribe import delete_subscribers
+    from app.pages.subcribe import archive_subscribers
 
 
     # Blueprint Registrations:
@@ -32,6 +35,9 @@ def create_app():
     app.register_blueprint(logouts)
     app.register_blueprint(signups)
     app.register_blueprint(dashboards)
+    app.register_blueprint(edit_subscribers)
+    app.register_blueprint(delete_subscribers)
+    app.register_blueprint(archive_subscribers)
 
     @app.teardown_appcontext
     def shutdown_session(exception=None):
