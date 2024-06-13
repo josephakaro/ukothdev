@@ -10,7 +10,6 @@ archive_subscribers = Blueprint('archive_subscribers', __name__)
 
 
 @subcribe.route('/subscribe', methods=['GET', 'POST'])
-@login_required
 def subscribe():
     if request.method == 'POST':
         firstname = request.form['firstname']
