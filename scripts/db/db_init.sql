@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS subscriber(
     PRIMARY KEY (subs_id)
 )
 
+ALTER TABLE subscriber ADD COLUMN is_archived BOOLEAN DEFAULT FALSE;
+
 CREATE TABLE IF NOT EXISTS contact(
     contact_id INT AUTO_INCREMENT,
     firstname VARCHAR(50) NOT NULL,
