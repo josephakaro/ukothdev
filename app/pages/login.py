@@ -15,7 +15,8 @@ def login():
         user = User.query.filter_by(email=email).first()
         if user and check_password_hash(user.password, password):
             session['user_id'] = user.user_id
-            session['user_name'] = user.firstname
+            session['firstname'] = user.firstname
+            session['lastname'] = user.lastname
             flash('Login successful!', 'success')
             return redirect(url_for('dashboards.dashboard'))
         else:

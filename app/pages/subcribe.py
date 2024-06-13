@@ -3,13 +3,13 @@ from app.database.models.subscriber import Subscribe
 from app.pages.login import login_required
 from app.database import db
 
-subcribe = Blueprint('subscribe', __name__)
+subcriber = Blueprint('subscribe', __name__)
 edit_subscribers = Blueprint('edit_subscribers', __name__)
 delete_subscribers = Blueprint('delete_subscribers', __name__)
 archive_subscribers = Blueprint('archive_subscribers', __name__)
 
 
-@subcribe.route('/subscribe', methods=['GET', 'POST'])
+@subcriber.route('/subscribe', methods=['GET', 'POST'])
 def subscribe():
     if request.method == 'POST':
         firstname = request.form['firstname']

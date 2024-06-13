@@ -4,62 +4,107 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
 <style>
-
-.card-title {
-    font-size: 2rem;
-    text-align: center;
-}
-
-.card {
-    text-align: center;
-}
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    #wrapper {
+        display: flex;
+        width: 100%;
+    }
+    #sidebar-wrapper {
+        min-height: 100vh;
+        width: 250px;
+        margin-left: -250px;
+        transition: margin 0.25s ease-out;
+        background: #343a40;
+        color: white;
+    }
+    #sidebar-wrapper.toggled {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        width: 100%;
+    }
+    .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+    }
+    .list-group-item {
+        background-color: #343a40;
+        color: white;
+        border: none;
+    }
+    .list-group-item:hover {
+        background-color: #495057;
+    }
+    #menu-toggle {
+        margin: 0.25rem;
+    }
+    @media (min-width: 768px) {
+        #sidebar-wrapper {
+            margin-left: 0;
+        }
+    }
+    .navbar .user-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #007bff;
+        color: white;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 <!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <h1>UKOTH<span>DEV</span></h1>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+    <button class="btn btn-primary" id="menu-toggle">
+        <i class="fas fa-donut"></i>
+    </button>
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    SOLUTIONS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Overview</a>
-                    <a class="dropdown-item" href="#">Enterprise</a>
-                    <a class="dropdown-item" href="#">DMBs</a>
-                    <a class="dropdown-item" href="#">Startups</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">WHY UKOTHDEV</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SUCCESS STORIES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SERVICES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">CONTACT</a>
+                <a class="nav-link" href="#">Users Over Time</a>
             </li>
         </ul>
-        <a class="btn btn-primary ml-lg-3" href="#">GET QUOTES</a>
+        {% if session.get('user_firstname') and session.get('user_lastname') %}
+        <div class="navbar-text user-avatar">
+            {{ session['user_firstname'][0] }}{{ session['user_lastname'][0] }}
+        </div>
+        {% endif %}
     </div>
 </nav>
-<div class="container mt-4">
 
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="sidebar-heading">Dashboard</div>
+        <div class="list-group list-group-flush">
+            <a href="{{ url_for('dashboards.dashboard') }}" class="list-group-item list-group-item-action">Dashboard</a>
+            <a href="#" class="list-group-item list-group-item-action">Users Over Time</a>
+        </div>
+    </div>
+
+<div class="page-content-wrapper">
+<div class="container-fluid mt-4">
 <h1 class="my-4">Dashboard</h1>
     <!-- Summary Counts -->
     <div class="row">
@@ -123,4 +168,13 @@
         </tbody>
     </table>
 </div>
+</div>
+</div>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("toggled");
+    });
+</script>
 {% endblock %}
