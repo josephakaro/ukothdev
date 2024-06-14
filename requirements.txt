@@ -1,6 +1,7 @@
 blinker==1.8.2
 click==8.1.7
 flask==3.0.3
+Flask-Login==0.6.3
 greenlet==3.0.3
 gunicorn==22.0.0
 importlib-metadata==7.1.0
