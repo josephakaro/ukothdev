@@ -14,7 +14,7 @@ def create_app():
 
     # Blueprint Imports:
     from app.pages.index import home
-    from app.pages.subcribe import subcribe
+    from app.pages.subcribe import subcriber
     from app.pages.thanks import thanks
     from app.pages.contact import contacts
     from app.pages.login import logins
@@ -28,7 +28,7 @@ def create_app():
 
     # Blueprint Registrations:
     app.register_blueprint(home)
-    app.register_blueprint(subcribe)
+    app.register_blueprint(subcriber)
     app.register_blueprint(thanks)
     app.register_blueprint(contacts)
     app.register_blueprint(logins)
