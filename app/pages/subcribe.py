@@ -23,7 +23,7 @@ def subscribe():
             return redirect('thanks.thank')
 
         else:
-            new_subscriber = Subscribe(firstname=firstname, lastname=lastname, email=email)
+            new_subscriber = Subscribe(firstname=firstname, lastname=lastname, email=email, is_archived=0)
             db.add(new_subscriber)
             db.commit()
             return redirect(url_for('thanks.thank'))
