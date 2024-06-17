@@ -1,5 +1,5 @@
 # This is Flask Application Factory
-from flask import Flask
+from flask import Flask, render_template
 from app.database import db
 from dotenv import load_dotenv
 
@@ -42,5 +42,9 @@ def create_app():
     @app.teardown_appcontext
     def shutdown_session(exception=None):
         db.remove()
+
+    @app.errorhandler(500)
+    def internal_server_error(error):
+        return render_template('500.html'), 500
     
     return app
