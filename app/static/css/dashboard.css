@@ -1,62 +1,100 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+:root {
+    --main-bg-color: #009d63;
+    --second-bg-color: #c1efde;
+    
+    --second-text-color: #bbbec5;
+    --main-text-color: #009d63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary-text {
+    color: var(--main-text-color);
+}
+
+.second-text {
+    color: var(--second-text-color);
+}
+
+.primary-bg {
+    background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+    background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+    border-radius: 100%;
 }
 
 #wrapper {
-    display: flex;
-    width: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(
+        to right,
+        #baf3d7,
+        #c2f5de,
+        #cbf7e4,
+        #d4f8ea,
+        #ddfaef
+    );
 }
+
 #sidebar-wrapper {
     min-height: 100vh;
-    width: 250px;
-    margin-left: -250px;
+    margin-left:  -15rem;
     transition: margin 0.25s ease-out;
-    background: #343a40;
-    color: white;
 }
-#page-content-wrapper {
-    width: 100%;
-}
-.sidebar-heading {
+
+#sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
 }
+
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper{
+    margin-left: 0;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
 .list-group-item {
-    background-color: #343a40;
-    color: white;
+    border: none;
+    padding: 20px 30px;
+}
+
+.list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
     border: none;
 }
-.list-group-item:hover {
-    background-color: #495057;
-}
-#menu-toggle {
-    margin: 0.25rem;
-}
-@media (min-width: 768px) {
+
+@media (min-width: 769px) {
     #sidebar-wrapper {
         margin-left: 0;
     }
-}
-.navbar .user-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: white;
-    font-size: 1.2rem;
-    margin-right: 1rem;
-}
 
-.card-title {
-    font-size: 2rem;
-    text-align: center;
-}
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
 
-.card {
-    text-align: center;
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
 }
