@@ -34,7 +34,7 @@
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                 <i class="fas fa-map-marker-alt me-2"></i>Outlet
             </a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+            <a href="/logout" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
                 <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
             </a>
         </div>
@@ -57,12 +57,13 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user me-2"></i>Joseph Akaro
+                            <img src="{{ url_for('static', filename='assets/img/joseph.jpg') }}" alt="joseph profile" class="avator me-2">Joseph Akaro
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a href="#" class="dropdown-item"><i class="fa-solid fa-user me-2"></i>Profile</a></li>
                             <li><a href="#" class="dropdown-item"><i class="fa-solid fa-gear me-2"></i>Setting</a></li>
-                            <li><a href="#" class="dropdown-item text-danger"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa-solid fa-gear me-2"></i>Billing</a></li>
+                            <li><a href="/login" class="dropdown-item text-danger"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -72,17 +73,17 @@
         <div class="container-flush px-4">
             <div class="row g-3 my-2">
                 <div class="col-md-3">
-                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div class="hover p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
                             <h3 class="fs-2">720</h3>
-                            <p class="fs-5">Products</p>
+                            <p class="fs-5">Clients</p>
                         </div>
                         <i class="fas fa-gift fs-1 primary-text border rounded-full second-bg p-3"></i>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div class="hover p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
                             <h3 class="fs-2">2939</h3>
                             <p class="fs-5">Sales</p>
@@ -92,7 +93,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div class="hover p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
                             <h3 class="fs-2">3899</h3>
                             <p class="fs-5">Delivery</p>
@@ -102,7 +103,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div class="hover p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
                             <h3 class="fs-2">%25</h3>
                             <p class="fs-5">Increase</p>
@@ -119,33 +120,44 @@
                 <table class="table bg-white rounded shadow-sm table-hover">
                     <thead>
                             <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Customer</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Order #</th>
+                            <th scope="col">User</th>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                    
                         <tr>
-                        <th scope="row">1</th>
-                        <td>Playstations 4</td>
-                        <td>Joseph</td>
-                        <td>$400.99</td>
+                        <th scope="row">12323</th>
+                        <td>Joseph Akaro</td>
+                        <td>Basic - Annaul</td>
+                        <td>$144</td>
+                        <td>
+                                <button class="btn btn-primary primary-bg">Edit</button>
+                                <button class="btn btn-primary primary-bg">Delete</button>
+                        </td>
                     </tr>
                     
                     <tr>
-                        <th scope="row">2</th>
-                        <td>laptop</td>
-                        <td>Thornton</td>
-                        <td>$1499.99</td>
+                        <th scope="row">26662</th>
+                        <td>John Doe</td>
+                        <td>Starter - Annual</td>
+                        <td>$216</td>
+                        <td>
+                            <button class="btn btn-primary primary-bg">Edit</button>
+                            <button class="btn btn-primary primary-bg">Delete</button>
+                        </td>
                         </tr>
                         <tr>
-                        <th scope="row">3</th>
-                        <td>Keyboard</td>
-                        <td>John</td>
-                        <td>$249.99</td>
+                        <th scope="row">32683</th>
+                        <td>Brien Allan</td>
+                        <td>Basic - Monthly</td>
+                        <td>$12</td>
+                        <td><button class="btn btn-primary primary-bg">Edit</button>
+                            <button class="btn btn-primary primary-bg">Delete</button>
+                        </td>
                         </tr>
                     </tbody>
                 </table>

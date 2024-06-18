@@ -1,9 +1,9 @@
 :root {
-    --main-bg-color: #009d63;
-    --second-bg-color: #c1efde;
+    --main-bg-color: #9d0000;
+    --second-bg-color: #efc1c1;
     
     --second-text-color: #bbbec5;
-    --main-text-color: #009d63;
+    --main-text-color: #9d0000;
 }
 
 * {
@@ -32,15 +32,25 @@
     border-radius: 100%;
 }
 
+.hover:hover {
+    background-color: var(--second-text-color) !important;
+}
+
+.avator{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
 #wrapper {
     overflow-x: hidden;
     background-image: linear-gradient(
         to right,
-        #baf3d7,
-        #c2f5de,
-        #cbf7e4,
-        #d4f8ea,
-        #ddfaef
+        #f3baba,
+        #f5d5c2,
+        #f7ddcb,
+        #f8dad4,
+        #fadddd
     );
 }
 
