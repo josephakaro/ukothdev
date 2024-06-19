@@ -7,7 +7,6 @@ from app.database.models.contact import Contact
 dashboards = Blueprint('dashboards', __name__)
 
 @dashboards.route('/dashboard', methods=['GET', 'POST'])
-@login_required
 def dashboard():
 
     # Checking for the firstname and lastname stored in a session else query the database
