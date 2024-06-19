@@ -7,14 +7,15 @@ from app.database.models.contact import Contact
 dashboards = Blueprint('dashboards', __name__)
 
 @dashboards.route('/dashboard', methods=['GET', 'POST'])
+@login_required
 def dashboard():
 
-    # Checking for the firstname and lastname stored in a session else query the database
-    user_firstname = session.get('firstname', 'A')
-    user_lastname = session.get('lastname', 'User')
+    # # Checking for the firstname and lastname stored in a session else query the database
+    # user_firstname = session.get('firstname', 'A')
+    # user_lastname = session.get('lastname', 'User')
 
-    users = User.query.all()
-    subscribers = Subscribe.query.all()
-    contacts = Contact.query.all()
-    recent_subscribers = Subscribe.query.order_by(Subscribe.subs_id.desc()).limit(5).all()
-    return render_template('dashboard.html', users=users, subscribers=subscribers, contacts=contacts, recent_subscribers=recent_subscribers, user_firstname=user_firstname, user_lastname=user_lastname)
+    # users = User.query.all()
+    # subscribers = Subscribe.query.all()
+    # contacts = Contact.query.all()
+    # recent_subscribers = Subscribe.query.order_by(Subscribe.subs_id.desc()).limit(5).all()
+    return render_template('dashboard.html')
