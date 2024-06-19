@@ -4,124 +4,173 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-
 {% endblock %}
 
 {% block content %}
-<!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <!-- brand-logo -->
-    <div class="brand-logo">
-        <h1>UKOTH<span>DEV</span></h1>
+<!-- Navigation Start Here! -->
+<div class="relative">
+<div class="navbar bg-base-100 md:fixed md:top-0 md:left-0 md:right-0">
+    <div class="navbar-start">
+        <div class="dropdown">
+        <div tabindex="0" role="button" class="lg:hidden">
+            UkotHosting
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-full w-52">
+            <li>
+                <a>WordPress</a>
+                <ul class="p-2">
+                    <li><a>Mangaged WordPress</a></li>
+                    <li><a>Mangaged WooCommerce</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Website Builder</a>
+                <ul class="p-2">
+                    <li><a>Ukoth Website Builder</a></li>
+                    <li><a>eCommerce Website Builder</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Hosting</a>
+                <ul class="p-2">
+                    <li><a>Webhosting</a></li>
+                    <li><a>Cloud Hosting</a></li>
+                    <li><a>VPS Hosting</a></li>
+                    <li><a>Email Hosting</a></li>
+                </ul>
+            </li>
+            <li><a>Pro</a></li>
+            <li><a>Domains</a></li>
+        </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">UkotHosting</a>
     </div>
-    <!-- navbar toggler button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- navbar links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    SOLUTIONS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Overview</a>
-                    <a class="dropdown-item" href="#">Enterprise</a>
-                    <a class="dropdown-item" href="#">DMBs</a>
-                    <a class="dropdown-item" href="#">Startups</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">WHY UKOTHDEV</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SUCCESS STORIES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SERVICES</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">CONTACT</a>
-            </li>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+        <li>
+            <details>
+            <summary>Products</summary>
+            <ul class="p-2">
+                <li><a>Mangaged WordPress</a></li>
+                <li><a>Mangaged WooCommerce</a></li>
+            </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+            <summary>Solutions</summary>
+            <ul class="p-2">
+                <li><a>WordPress Builder</a></li>
+                <li><a>eCommerce Builder</a></li>
+            </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+            <summary>Developers</summary>
+            <ul class="p-2">
+                <li><a>Webhosting</a></li>
+                <li><a>Cloud Hosting</a></li>
+                <li><a>VPS Hosting</a></li>
+                <li><a>Email Hosting</a></li>
+            </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+            <summary>Partners</summary>
+            <ul class="p-2">
+                <li><a>Webhosting</a></li>
+                <li><a>Cloud Hosting</a></li>
+                <li><a>VPS Hosting</a></li>
+                <li><a>Email Hosting</a></li>
+            </ul>
+            </details>
+        </li>
+        <li><a>Pricing</a></li>
         </ul>
     </div>
-    <!-- navbar button -->
-    <div class="btn btn-primary ml-lg-3">
-        <a href="#">GET QUOTES</a>
+    <div class="navbar-end mx-5">
+        <label class="swap swap-rotate mx-5">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" class="theme-controller" value="synthwave" />
+            <!-- sun icon -->
+            <svg class="swap-off fill-current w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                
+            <!-- moon icon -->
+            <svg class="swap-on fill-current w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>    
+            </label>
+            <a href="/login" class="btn btn-ghost rounded-full mx-2">Log in</a>
+            <a class="btn btn-outline rounded-full mx-2">Sign up</a>
     </div>
-</nav>
-    <!-- hero section -->
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Building apps is hard...<span>when you're distracted.</span></h1>
-            <p>When hiring an app or web development team to build custom software, one variable matters most: are the developers <span>fully
-            dedicated to your success</span>, or  are you <span>client of many?</span>
-            </p>
-            <a href="#">Learn More</a>
-        </div>
-        <div class="hero-image">
-            <img src="{{ url_for('static', filename='assets/img/hero-01.jpg') }}"  alt="software enginer coding"/>
-        </div>
-    </div>
-    <div class="top-rated">
-        <h2>The top-rated software firm in South Sudan, with more than 200 five-star reviews from past clients</h2>
-        <div class="review-card">
-        <div class="review">
-                <img src="https://asset.brandfetch.io/idN7c_7lEQ/idg6LKkjnM.svg" alt="G2 logo"/>
-                <div class="stars">
-                    <span>⭐⭐⭐⭐⭐</span>
-                    <p>G2 Reviews</p>
-                </div>
-        </div>
-        <div class="review">
-            <img src="https://asset.brandfetch.io/id6O2oGzv-/idvNIQR3p7.svg" alt="Google logo"/>
-            <div class="stars">
-                <span>⭐⭐⭐⭐⭐</span>
-                <p>Google Reviews</p>
+</div>
+</div>
+<!-- Navigation End Here! -->
+
+<!-- Hero Section Start Here! -->
+<div class="hero min-h-screen bg-primary">
+    <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-lg">
+                <h1 class="mb-5 text-4xl font-bold max-w-lg w-full">Learn here. Dream here. Develop here.</h1>
+                <p class="mb-5 text-2xl max-w-lg w-full">Join the wave of developers building and scaling apps with simple cloud tools, top-tier reliability, and predictable pricing. Powerful and production-ready, our cloud platform has the solutions you need to succeed.</p>
+                <button class="btn btn-ghost btn-outline btn-secondary rounded-full me-2">Sign up with email</button>
+                <button class="btn btn-ghost btn-outline btn-secondary rounded-full me-2">Sign up with Google</button>
+                <button class="btn btn-ghost btn-outline btn-secondary rounded-full me-2">Sign up with GitHub</button>
             </div>
         </div>
-        <div class="review">
-            <img src="https://shareables-prod-static.clutch.co/badges/top_clutch.co_software_developers_consumer_products__services_2023.svg" alt="Clutch logo"/>
-            <div class="stars">
-                <span>⭐⭐⭐⭐⭐</span>
-                <p>Clutch Reviews</p>
+</div>
+<!-- Hero Section Start Here! -->
+
+<!-- Features Section Start Here! -->
+<div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+            <h1 class="text-5xl font-bold">Deploy</h1>
+            <p class="py-6">UkotHosting's virtual conference for developers, startups, and founders is back on July 9, 2024!</p>
+            <button class="btn btn-primary">Register Now</button>
         </div>
     </div>
 </div>
-</div>
-<div class="solution">
-    <div class="section-1">
-        <h1>Whay <span>now?</span></h1>
-        <p>
-            <span>As a business</span>, have you felt the strain of hours lost to manual tasks? Struggling with a patchwork of SaaS tools that promised much but deliver little cohesion, or - even worse - wrestling with a legacy interface that's become more of a hinderance than a help?
-        </p>
-        <p>
-            <span>As an entrepreneur</span>, have you found the perfect problem that you're eager to solve with a custom mobile or web-based application?
-        </p>
-        <p>
-            <span>UkothDev <span id="red">designs, develops, and launches</span> beautiful apps and web-apps that you'll be proud to own</span>, with a process that makes sense. And, most importantly, with a team assigned full-time to your project.
-        </p>
+<!-- Features Section Start Here! -->
+{% endblock %}
+
+
+{% block footer %}
+<footer class="footer p-10 bg-base-200 text-base-content">
+    <nav>
+      <h6 class="footer-title">Services</h6> 
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav> 
+    <nav>
+      <h6 class="footer-title">Company</h6> 
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav> 
+    <nav>
+      <h6 class="footer-title">Legal</h6> 
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Cookie policy</a>
+    </nav>
+  </footer> 
+  <div class="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+    <aside class="items-center grid-flow-col">
+        <a class="btn btn-ghost text-xl">UkotHosting</a>
+        <p>UkotHosting Ltd. <br>Providing reliable tech since 2024</p>
+    </aside> 
+    <nav class="md:place-self-center md:justify-self-end">
+        <div class="grid grid-flow-col gap-4">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
     </div>
-    <div class="section-2">
-        <img src="https://designli.co/hubfs/images/homepage/why-now-compressed.png" alt="software engineer coding"/>
-    </div>
-</div>
-<div class="solution border">
-    <div class="section-1">
-        <h1>Hire an <span>on-demand team</span> of the specialists you need.</h1>
-        <p>
-            Left alone, designers will create art projects. Engineers will create science fair gizmos. Business minds will create spreadsheets. UkothDev brings together these disciplines into on-demand, <span id="red">dedicated product team</span> that pour themselves, full-time, into the success of your app or web-app initiative.
-        </p>
-        <p>
-            Existing as your dedicated software engineering department, we'll work together to solve your most pressing business problems with custom software.
-        </p>
-    </div>
-    <div class="section-2">
-        <img src="https://designli.co/hs-fs/hubfs/images/homepage/card-diagram.png?width=633&height=698&name=card-diagram.png" alt="software engineer coding"/>
-    </div>
+    </nav>
 </div>
 {% endblock %}
