@@ -14,7 +14,9 @@ function DigitalOcean() {
 
 	return (
 		<div>
-			<h1>Digital Ocean Droplets</h1>
+			<h1 className="text-center text-3xl text-blue-500">
+				Digital Ocean Droplets
+			</h1>
 			<ul>
 				{droplets.map((droplet) => (
 					<li key={droplet.id}>{droplet.name}</li>
