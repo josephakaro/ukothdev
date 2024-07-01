@@ -1,21 +1,29 @@
-const bcrypt = require('bcryptjs');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-let users = [];
+const User = sequelize.define(
+	'User',
+	{
+		id: {
+			type: DataTypes.INTEGER,
+			autoIncrement: true,
+			primaryKey: true,
+		},
+		username: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true,
+		},
+		password: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+	},
+	{
+		timestamps: true,
+		createdAt: 'created_at',
+		updatedAt: false,
+	}
+);
 
-const findUserByUsername = (username) =>
-	users.find((user) => user.username === username);
-
-const findUserById = (id) => users.find((user) => user.id === id);
-
-const addUser = async (username, password) => {
-	const hashedPassword = await bcrypt.hash(password, 10);
-	const user = {
-		id: Date.now().toString(),
-		username,
-		password: hashedPassword,
-	};
-	users.push(user);
-	return user;
-};
-
-module.exports = { findUserByUsername, findUserById, addUser };
+module.exports = User;
