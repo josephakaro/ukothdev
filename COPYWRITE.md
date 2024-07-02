@@ -2,15 +2,24 @@
 
 ## Navigation Bar
 
-    - Logo
-    - lists:
+### Logo
+
+    - Brand Logo
+
+### list:
+
         - About Us
         - Services
         - Testimonials
-        - More:
-            - Our Services:
-                - `Web Development`
+
+#### More:
+
+##### - Our Services:
+
+###### - `Web Development`
+
                     - Customized solutions for your online presence.
+
                 - `Hosting`
                     - Reliable hosting services for your website.
                 - `SEO`
@@ -39,6 +48,8 @@
                             Summary of Article One
                         - `Link`
                             Read More
+                - `Link`
+                    See more articles >
 
 ## Hero Section:
 

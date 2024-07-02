@@ -9,7 +9,7 @@ import Dashboard from './pages/Dashboard';
 function App() {
 	return (
 		<Router>
-			<div className="flex flex-col items-center justify-center h-screen w-screen">
+			<div className="flex flex-col items-center justify-center fixed h-full overflow-y-auto w-full">
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Landing />} />
